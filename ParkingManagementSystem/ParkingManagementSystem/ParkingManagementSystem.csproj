@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{87EAEDB2-FA19-406C-BC42-9879C029BE63}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ParkingManagementSystem</RootNamespace>
+    <AssemblyName>ParkingManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="carParkingHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="carParkingHistory.Designer.cs">
+      <DependentUpon>carParkingHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersHistory.Designer.cs">
+      <DependentUpon>CustomersHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBHandler.cs" />
+    <Compile Include="frmCheckin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckin.Designer.cs">
+      <DependentUpon>frmCheckin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckout.Designer.cs">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployeeManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeManagement.Designer.cs">
+      <DependentUpon>frmEmployeeManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginForm.Designer.cs">
+      <DependentUpon>frmLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmParkingManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParkingManager.Designer.cs">
+      <DependentUpon>frmParkingManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmParkingFeesManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParkingFeesManagement.Designer.cs">
+      <DependentUpon>frmParkingFeesManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="carParkingHistory.resx">
+      <DependentUpon>carParkingHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomersHistory.resx">
+      <DependentUpon>CustomersHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckin.resx">
+      <DependentUpon>frmCheckin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckout.resx">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeManagement.resx">
+      <DependentUpon>frmEmployeeManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginForm.resx">
+      <DependentUpon>frmLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParkingManager.resx">
+      <DependentUpon>frmParkingManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParkingFeesManagement.resx">
+      <DependentUpon>frmParkingFeesManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
