@@ -6,7 +6,7 @@ namespace ParkingManagementSystem
 {
     class DBHandler
     {
-        static string connectionString = @"Data Source=SYEDASARAMOOSVI\SQLEXPRESS;Initial Catalog=parkingdb;Integrated Security=True";
+        static string connectionString = @"Data Source=SYEDALIABBAS\SQLEXPRESS;Initial Catalog=parkingdb;Integrated Security=True";
         public static bool executeInsertQuery(SqlCommand sqlCommand)
         {
             SqlConnection sqlConnection = new SqlConnection(connectionString);
